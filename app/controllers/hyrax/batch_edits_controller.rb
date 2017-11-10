@@ -39,7 +39,15 @@ module Hyrax
         obj = ActiveFedora::Base.find(doc_id, cast: true)
         obj.destroy
       end
-      flash[:notice] = "Batch delete complete"
+
+      admin_set_name = "Administrative Set"
+      admin_set_name = AdminSet.first.title.first unless AdminSet.first.nil?
+
+      flash[:notice] = if flash[:notice].nil?
+                         "Batch delete complete"
+                       else
+                         I18n.t('errors.messages.batch_delete_collections_error', admin_set_name: admin_set_name)
+                       end
       after_destroy_collection
     end
 

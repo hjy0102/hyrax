@@ -36,7 +36,7 @@ module Hyrax
 
         def filter_docs_with_access!(access_type = :edit)
           no_permissions = []
-          if batch.empty?
+          if batch.empty? && flash[:notice].nil?
             flash[:notice] = 'Select something first'
           else
             batch.dup.each do |doc_id|

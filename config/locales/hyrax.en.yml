@@ -32,6 +32,7 @@ en:
       carrierwave_processing_error: "Cannot resize image."
       extension_blacklist_error: "You are not allowed to upload %{extension} files, prohibited types: %{prohibited_types}"
       extension_whitelist_error: "You are not allowed to upload %{extension} files, allowed types: %{allowed_types}"
+      batch_delete_collections_error: "One or more of the selected collections could not be deleted. You cannot delete a collection for which you have read-only access. In addition, you cannot delete a collection of the type \"%{admin_set_name}\" unless that collection is empty."
   helpers:
     action:
       add: "Add"
