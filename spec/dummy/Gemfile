@@ -1,0 +1,9 @@
+
+gem 'sqlite3', '1.3.13'
+
+# for saving Ruby gems into the gemfile from command line
+## USE: gem install gemrat
+## gemrat _YOUR_NEW_GEM_
+## will update Gemfile with _YOUR_NEW_GEM_
+
+gem 'gemrat', '0.4.6'
